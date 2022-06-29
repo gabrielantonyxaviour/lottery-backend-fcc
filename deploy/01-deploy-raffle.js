@@ -36,7 +36,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     }) // Verify the deployment
     if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
         log("Verifying...")
-        await verify(raffle.address, arguments)
+        await verify(raffle.address, args)
     }
 
     log("Enter lottery with command:")
